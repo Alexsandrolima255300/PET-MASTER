@@ -2,8 +2,9 @@ import React,{useEffect,useMemo,useState}from'react';
 import{createRoot}from'react-dom/client';
 import{Search,ShoppingCart,UserCircle,Menu,X,ChevronDown,Home,Tag,ShieldCheck,FileText,Phone,Plus,Trash2,Settings,Save,Truck,Heart,Stethoscope,Package}from'lucide-react';
 import'./styles.css';
+import'./referenceOverrides.css';
 const WA='553433341608',ADDRESS='Av. Nossa Senhora do Desterro, 1790 - Jardim Elza Amui, Uberaba - MG, 38082-350';
-const LOGO='/logo.svg?v=3';
+const LOGO='/logo.svg?v=4';
 const initial=[
 {id:'1',name:'Ração Premium para Cães',price:89.9,cat:'Alimentação',stock:12,img:'https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=700&q=80'},
 {id:'2',name:'Petisco Natural',price:24.9,cat:'Alimentação',stock:25,img:'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=700&q=80'},
