@@ -1,0 +1,16 @@
+/* Reference visual adjustments */
+.logo img{width:400px;height:133px;object-fit:contain;object-position:left center;display:block;background:#fff}
+.heroBanner{background:#fff;border:1px solid #f0f2f5;box-shadow:0 8px 28px rgba(16,43,89,.05)}
+.heroPets{background:#fff;isolation:isolate}
+.heroPets .sun{z-index:0;width:390px;height:390px;right:-30px;bottom:-190px;background:linear-gradient(135deg,#ffd95a,#ffc21a)}
+.heroPets .dog,.heroPets .cat{z-index:2;background-color:transparent;background-blend-mode:multiply;mix-blend-mode:multiply;filter:drop-shadow(0 12px 12px rgba(16,43,89,.08)) saturate(1.05);border:0}
+.heroPets .dog{width:430px;height:450px;right:215px;bottom:-18px;background-image:url('https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=800&q=90');background-position:center bottom;background-size:contain}
+.heroPets .cat{width:315px;height:400px;right:20px;bottom:-12px;background-image:url('https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=700&q=90');background-position:center bottom;background-size:contain}
+.heroPets .pawOutline{display:none}
+.heroCopy h1{font-size:58px;letter-spacing:-2.8px}
+.heroCopy h1 strong{color:#f4b500}
+.categoryGrid{margin-top:24px}
+.categoryCard{min-height:250px}
+@media(max-width:1150px){.logo{flex-basis:300px}.logo img{width:290px;height:97px}.heroPets .dog{right:180px}.heroPets .cat{right:0}}
+@media(max-width:850px){.logo img{width:245px;height:82px}.heroPets .dog{width:330px;height:330px;right:150px}.heroPets .cat{width:230px;height:300px;right:15px}}
+@media(max-width:560px){.logo img{width:175px;height:60px}.heroPets .dog{width:250px;height:260px;right:110px}.heroPets .cat{width:190px;height:230px;right:-5px}}
