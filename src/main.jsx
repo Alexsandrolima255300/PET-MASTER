@@ -6,7 +6,7 @@ import'./styles.css';
 import'./referenceOverrides.css';
 const WA='553433341608',ADDRESS='Av. Nossa Senhora do Desterro, 1790 - Jardim Elza Amui, Uberaba - MG, 38082-350';
 const DEFAULT_LOGO='/logo.svg?v=4';
-const DEFAULT_BANNER={title:'Tudo para o seu pet, em um só lugar!',description:'Os melhores produtos com qualidade, preço justo e muito carinho para seu melhor amigo.',button:'VER PRODUTOS',image:''};
+const DEFAULT_BANNER={title:'Tudo para o seu pet, em um só lugar!',description:'Os melhores produtos com qualidade, preço justo e muito carinho para seu melhor amigo.',button:'VER PRODUTOS',image:'/petmaster-banner.jpg'};
 const initial=[
 {id:'1',name:'Ração Premium para Cães',price:89.9,cat:'Alimentação',stock:12,img:'https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=700&q=80'},
 {id:'2',name:'Petisco Natural',price:24.9,cat:'Alimentação',stock:25,img:'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=700&q=80'},
@@ -16,10 +16,10 @@ const initial=[
 {id:'6',name:'Suplemento e Cuidados',price:59.9,cat:'Saúde',stock:10,img:'https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=700&q=80'}];
 const categories=[['Alimentação','Rações e petiscos','food'],['Acessórios','Tudo para o dia a dia','accessories'],['Higiene','Shampoo e cuidados','hygiene'],['Brinquedos','Diversão garantida','toys'],['Saúde','Medicamentos e mais','health'],['Casa e Conforto','Camas e utilidades','home']];
 const categoryIcons={food:Package,accessories:Heart,hygiene:Truck,toys:Heart,health:Stethoscope,home:Home};
-function Logo(){const src=(()=>{try{return localStorage.getItem('petmaster-logo')||DEFAULT_LOGO}catch{return DEFAULT_LOGO}})();return <div className="logo"><img src={src} alt="PetMaster - A família do seu pet"/></div>}
+function Logo(){return <div className="logo"><img src={DEFAULT_LOGO} alt="PetMaster - A família do seu pet"/></div>}
 function App(){
 const[products,setProducts]=useState(()=>{try{return JSON.parse(localStorage.getItem('petmaster-products')||'null')||initial}catch{return initial}});
-const[cart,setCart]=useState([]),[query,setQuery]=useState(''),[cat,setCat]=useState('Todos'),[admin,setAdmin]=useState(false),[editing,setEditing]=useState(null),[menu,setMenu]=useState(false),[account,setAccount]=useState(false),[user,setUser]=useState(()=>{try{return JSON.parse(localStorage.getItem('petmaster-user')||'null')||{name:'',email:''}}catch{return{name:'',email:''}}}),[cartOpen,setCartOpen]=useState(false),[logo,setLogo]=useState(()=>{try{return localStorage.getItem('petmaster-logo')||DEFAULT_LOGO}catch{return DEFAULT_LOGO}}),[editorOpen,setEditorOpen]=useState(false),[banner,setBanner]=useState(()=>{try{return{...DEFAULT_BANNER,...JSON.parse(localStorage.getItem('petmaster-banner')||'{}')}}catch{return DEFAULT_BANNER}});
+const[cart,setCart]=useState([]),[query,setQuery]=useState(''),[cat,setCat]=useState('Todos'),[admin,setAdmin]=useState(false),[editing,setEditing]=useState(null),[menu,setMenu]=useState(false),[account,setAccount]=useState(false),[user,setUser]=useState(()=>{try{return JSON.parse(localStorage.getItem('petmaster-user')||'null')||{name:'',email:''}}catch{return{name:'',email:''}}}),[cartOpen,setCartOpen]=useState(false),[logo]=useState(DEFAULT_LOGO),[editorOpen,setEditorOpen]=useState(false),[banner,setBanner]=useState(()=>{try{return{...DEFAULT_BANNER,...JSON.parse(localStorage.getItem('petmaster-banner')||'{}')}}catch{return DEFAULT_BANNER}});
 const cats=['Todos',...categories.map(c=>c[0])];
 useEffect(()=>{try{localStorage.setItem('petmaster-products',JSON.stringify(products))}catch{}},[products]);
 useEffect(()=>{try{localStorage.setItem('petmaster-banner',JSON.stringify(banner))}catch{}},[banner]);
