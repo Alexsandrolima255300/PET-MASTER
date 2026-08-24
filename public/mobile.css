@@ -1,0 +1,73 @@
+/* PET-MASTER — mobile-first refinements. Desktop layout remains untouched. */
+@media (max-width: 850px){
+  body{overflow-x:hidden}
+  .topbar{width:100%;max-width:none;gap:10px;padding:10px 14px}
+  .logo{min-width:0;flex:1 1 auto;width:auto}
+  .logo img{width:min(205px,100%);height:auto;max-height:58px;object-fit:contain}
+  .account,.cartButton{flex:0 0 auto}
+  .account svg{width:31px;height:31px}
+  .cartButton svg{width:29px;height:29px}
+  .mobileMenu{width:40px;height:40px;display:grid;place-items:center;flex:0 0 40px}
+  .mobileMenu svg{width:26px;height:26px}
+  .navline{width:100%;padding:8px 14px;display:block;position:relative}
+  .allCategories{width:100%;min-width:0;height:48px;font-size:13px}
+  .navline nav.open{top:58px;left:14px;right:14px;z-index:50}
+
+  .heroBanner{width:calc(100% - 24px);margin:14px 12px 0;height:590px;min-height:590px;grid-template-columns:1fr!important;border-radius:22px}
+  .heroCopy{padding:32px 22px 0!important;order:1!important;position:relative;z-index:3}
+  .heroCopy h1{font-size:36px;line-height:1.08;letter-spacing:-1.4px;margin-bottom:16px;max-width:100%}
+  .heroCopy p{font-size:16px;line-height:1.5;margin-bottom:20px;max-width:100%}
+  .heroButton{padding:13px 22px;font-size:14px}
+  .heroPets{order:2!important;position:absolute!important;left:0;right:0;bottom:0;top:235px!important;width:100%;height:auto;min-height:355px;background-size:cover!important;background-position:center bottom!important;background-repeat:no-repeat!important;z-index:1}
+  .heroEditorButton{z-index:5;top:12px!important;right:12px!important;font-size:10px!important;padding:8px 10px!important}
+
+  .categoryGrid{width:calc(100% - 24px);margin:18px 12px 45px;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .categoryCard{min-height:175px;border-radius:16px;padding:14px 7px}
+  .categoryIcon{width:82px;height:82px;margin-bottom:12px}
+  .categoryIcon svg{width:40px;height:40px}
+  .categoryCard b{font-size:15px;text-align:center}
+  .categoryCard span{font-size:10px;text-align:center}
+
+  .section,.featureStrip,.infoSection{width:calc(100% - 24px);margin-left:12px;margin-right:12px}
+  .section{padding:45px 0}
+  .sectionHead{gap:18px;margin-bottom:24px}
+  .section h2,.featureStrip h2,.infoSection h2{font-size:29px;line-height:1.12}
+  .filters{width:100%;overflow-x:auto;flex-wrap:nowrap;justify-content:flex-start;padding-bottom:4px;scrollbar-width:none}
+  .filters::-webkit-scrollbar{display:none}
+  .filters button{white-space:nowrap}
+  .productGrid{grid-template-columns:1fr;gap:24px}
+  .productImg{height:285px}
+
+  .featureStrip{padding:30px 22px;margin-bottom:20px;border-radius:18px}
+  .infoSection{padding:42px 0}
+  .contact{padding:55px 20px;gap:35px}
+  .contact h2{font-size:37px;line-height:1.08}
+  .contactInfo b{font-size:19px}
+  footer{padding:22px 14px;flex-wrap:wrap;gap:14px}
+  footer .logo{flex:0 0 150px}
+  footer .logo img{width:150px;height:auto}
+  footer>span{flex:1 1 100%;order:3}
+
+  .modal{padding:12px}
+  .modalBox,.cartBox{padding:24px 18px;border-radius:16px;max-height:94vh}
+  .two{grid-template-columns:1fr}
+  .editorActions{flex-direction:column}
+  .editorActions button{width:100%}
+  .bannerPreview{width:100%!important;max-height:190px;object-fit:cover;border-radius:10px}
+}
+
+@media (max-width: 560px){
+  .topbar{height:74px;padding:8px 10px}
+  .logo img{width:158px;max-height:52px}
+  .account svg{width:28px;height:28px}
+  .cartButton svg{width:27px;height:27px}
+  .mobileMenu{width:36px;height:36px;flex-basis:36px}
+  .mobileMenu svg{width:23px}
+  .heroBanner{height:570px;min-height:570px}
+  .heroCopy{padding:30px 19px 0!important}
+  .heroCopy h1{font-size:32px}
+  .heroCopy p{font-size:15px}
+  .heroPets{top:245px!important;min-height:325px}
+  .categoryCard{min-height:165px}
+  .productImg{height:270px}
+}
