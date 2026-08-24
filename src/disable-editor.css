@@ -1,0 +1,8 @@
+/* Editor visual desativado no site público. Não altera o layout ou funcionalidades da loja. */
+.heroEditorButton,
+.editorFloating,
+footer > button:first-of-type,
+.bannerEditor,
+.modal:has(.bannerEditor) {
+  display: none !important;
+}
